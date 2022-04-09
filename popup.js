@@ -19,11 +19,20 @@ window.onload = function () {
             console.log(httpRequest.status);
             console.log(this.readyState);
             // alert(httpRequest.responseText)
-            if (this.readyState == 4 && this.status == 201) {
-                document.getElementById("result").classList.add("text-success")
-                document.getElementById("result").classList.remove("text-danger")
-                document.getElementById("result").innerHTML = 'Issue add';
-                setTimeout(goodbay, 3000);
+            if (this.readyState == 4 ) {
+                if (this.status == 201){
+                    document.getElementById("result").classList.add("text-success")
+                    document.getElementById("result").classList.remove("text-danger")
+                    document.getElementById("result").innerHTML = 'Issue add';
+                    setTimeout(goodbay, 2000);
+                }
+                else {
+                    document.getElementById("result").classList.add("text-danger")
+                    document.getElementById("result").classList.remove("text-success")
+                    document.getElementById("result").innerHTML = 'Error login or token';
+                    setTimeout(alert, 2000, 'Error - '+this.status);
+                }
+
             }
         }
 
