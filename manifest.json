@@ -1,0 +1,9 @@
+{
+  "name": "Aleksandr",
+  "description": "Add issue on GitHub",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

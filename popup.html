@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add issue on GitHub</title>
+    <!-- Bootstrap CSS (Cloudflare CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+          integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--ссылаемся на шрифты, используемые в документе-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <!--здесь мы ссылаемся на стили, которые будем использовать в документе, а именно стиль иконок-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <style>
+        /* Модальная структура документа */
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 380px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post" id="form" class="mr-2 ml-2 text-left" name="github">
+    <div class="mb-1 mt-3">
+        <label for="login" class="form-label">Login:</label>
+        <input type="username" name="login" class="form-control" id="login" required>
+    </div>
+    <div class="mb-1 mt-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" name="password" class="form-control" id="password" required>
+    </div>
+    <div class="mb-1 mt-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="title" class="form-control" id="title" required>
+    </div>
+    <div class="mb-3">
+        <label for="textDescription" class="form-label ">Description:</label>
+        <textarea class="form-control" name="body" id="textDescription" rows="3"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-9 mt-1 text-right">
+            <p id="result" class="font-weight-bold"></p>
+        </div>
+        <div class="col-3 text-right">
+            <button id="btn" type="submit" class="btn btn-primary mb-3 button-send">Send</button>
+        </div>
+    </div>
+</form>
+
+</body>
+<script src="popup.js"></script>
+</html>
