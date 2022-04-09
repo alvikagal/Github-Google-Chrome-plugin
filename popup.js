@@ -15,10 +15,6 @@ window.onload = function () {
         formData[textDescription.name] = textDescription.value;
 
         httpRequest.onreadystatechange = function () {
-            console.log(httpRequest.responseText);
-            console.log(httpRequest.status);
-            console.log(this.readyState);
-            // alert(httpRequest.responseText)
             if (this.readyState == 4 ) {
                 if (this.status == 201){
                     document.getElementById("result").classList.add("text-success")
